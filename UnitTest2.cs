@@ -1,14 +1,14 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moodanalyser;
-    
 
 namespace TestProject1
 {
     [TestClass]
     public class UnitTest2
     {
-       
-          [TestMethod]
+        [TestMethod]
+        public void TestMethod1()
+        {
             public void reflectionDefaultConstructor()
             {
                 MoodAnalyser expected = new MoodAnalyser();
@@ -24,7 +24,7 @@ namespace TestProject1
                     throw new System.Exception(ex.Message);
                 }
             }
-            
+
             [TestMethod]
             public void defaultConstructorNoClassFound()
             {
@@ -59,7 +59,7 @@ namespace TestProject1
                 }
             }
 
-            
+
             [TestMethod]
             public void ReflectionParameterizedConstructor()
             {
@@ -78,7 +78,7 @@ namespace TestProject1
                 }
                 actual.Equals(expected);
             }
-           
+
             [TestMethod]
             public void returnParameterizedInvalidClass()
             {
@@ -101,5 +101,8 @@ namespace TestProject1
     }
 
 
+}
+}
+        }
     }
 }
